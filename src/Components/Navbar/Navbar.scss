@@ -1,0 +1,47 @@
+.navbar {
+  height: 60px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 30px;
+  background-color: transparent;
+  position: fixed;
+  z-index: 2;
+  transition-timing-function: ease-in;
+  transition: all 0.3s;
+
+  .logo {
+    height: 80%;
+
+    .logo__img {
+      height: 100%;
+    }
+  }
+  .joinButton {
+    margin-left: 20px;
+    padding: 8px 30px;
+    border: 1px solid #f40612;
+    border-radius: 3px;
+    color: white;
+    background-color: #f40612;
+    cursor: pointer;
+  }
+
+  .signInButton {
+    margin-left: 20px;
+    padding: 8px 20px;
+    outline-style: none;
+    color: white;
+    background-color: black;
+    border: 1px solid #888888;
+    border-radius: 3px;
+    cursor: pointer;
+  }
+}
+
+.navbar--dark {
+  background-color: black;
+  transition-timing-function: ease-in;
+  transition: all 0.3s;
+}

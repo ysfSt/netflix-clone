@@ -1,0 +1,30 @@
+.row {
+  color: white;
+
+  .row__title {
+    font-size: 1.8rem;
+    font-weight: 400;
+  }
+  .row__posters {
+    padding: 20px 10px;
+    display: flex;
+    overflow-x: scroll;
+    overflow-y: hidden;
+
+    .poster__backdrop {
+      height: 160px;
+      margin-right: 10px;
+      object-fit: contain;
+      transition: transform 0.5s;
+      position: relative;
+
+      &:hover {
+        transform: scale(1.07);
+      }
+    }
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+}
