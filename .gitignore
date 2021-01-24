@@ -5,7 +5,8 @@
 .env
 
 #file
-/src/requests.js
+
+requests.js
 
 # dependencies
 /node_modules
