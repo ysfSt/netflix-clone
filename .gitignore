@@ -4,6 +4,9 @@
 # api keys
 .env
 
+#file
+/src/requests.js
+
 # dependencies
 /node_modules
 /.pnp
