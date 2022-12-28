@@ -1,4 +1,4 @@
-export const API_KEY = process.env.REACT_APP_API_KEY;
+export const API_KEY = process.env.REACT_APP_MOVIE_API_KEY;
 
 const request = {
   fetchPopular: `/tv/popular?api_key=${API_KEY}&with_networks=213&language=en-US&page=1`,

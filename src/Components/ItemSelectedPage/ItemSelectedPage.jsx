@@ -1,19 +1,19 @@
-import React, { useEffect, useState } from "react";
-import axios from "../../axios";
-import "./ItemSelectedPage.scss";
-import YouTube from "react-youtube";
-import Row from "../Row/Row";
+import React, { useEffect, useState } from 'react';
+import axios from '../../axios';
+import './ItemSelectedPage.scss';
+import YouTube from 'react-youtube';
+import Row from '../Row/Row';
 
-const API_KEY = "596b7722ce42d224b229b0d98a7b902f";
+const API_KEY = process.env.REACT_APP_MOVIE_API_KEY;
 const topRated = `top_rated?api_key=${API_KEY}&with_networks=213&language=en-US`;
 const recommendations = `recommendations?api_key=${API_KEY}&with_networks=213&language=en-US`;
 
 const ItemSelected = (props) => {
   const { id, type } = props.match.params;
-  const [trailerUrl, setTrailerUrl] = useState("");
+  const [trailerUrl, setTrailerUrl] = useState('');
   const opts = {
-    height: "450",
-    width: "100%",
+    height: '450',
+    width: '100%',
     playerVars: {
       // https://developers.google.com/youtube/player_parameters
       autoplay: 1,
@@ -35,16 +35,16 @@ const ItemSelected = (props) => {
 
   return (
     <main>
-      <div className="itemSelected">
-        <div className="itemSelected__trailer">
+      <div className='itemSelected'>
+        <div className='itemSelected__trailer'>
           {trailerUrl && <YouTube videoId={trailerUrl} opts={opts} />}
         </div>
         <Row
-          title="Recommendations"
+          title='Recommendations'
           fetchUrl={`/${type}/${id}/${recommendations}`}
           type={type}
         />
-        <Row title="Top Rated" fetchUrl={`/${type}/${topRated}`} type={type} />
+        <Row title='Top Rated' fetchUrl={`/${type}/${topRated}`} type={type} />
       </div>
     </main>
   );
